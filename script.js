@@ -11,12 +11,24 @@ const range = function(num1, num2) {
     return array;
 }
 
-console.log(range(1,10));
-
+console.log(range(1,10)); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // 2. Next, write a sum function that takes an array of numbers and returns the sum of
 // these numbers. Run the example program and see whether it does indeed return 55.
 // Example output:
 // console.log(sum(range(1, 10))); // returns 55
+
+const sum = function(array) {            
+    let total = 0;
+    for (let value of array) {
+        total += value;
+    }
+    return total;
+}
+
+console.log(sum(range(1, 10))); // 55
+console.log(sum(range(2, 6))); // 20
+
+
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
 // its elements appear. For this exercise, write two functions, reverseArray and
 // reverseArrayInPlace. The first, reverseArray, takes an array as an argument and
