@@ -42,3 +42,15 @@ console.log(sum(range(2, 6))); // 20
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+
+const reverseArray = function(array) {
+    let reversed = [];
+    for (let n = array.length - 1; n >= 0; n--) {
+        reversed.push(array[n]);
+
+    }
+    return reversed;
+}
+
+console.log(reverseArray(["A", "B", "C"])); // ["C", "B", "A"]
+console.log(reverseArray([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
