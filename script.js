@@ -53,4 +53,19 @@ const reverseArray = function(array) {
 }
 
 console.log(reverseArray(["A", "B", "C"])); // ["C", "B", "A"]
-console.log(reverseArray([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+console.log(reverseArray([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1] 
+
+
+
+const reverseArrayInPlace = function(array) {
+    for (let i = 0; i < array.length / 2; i++) {
+      let old = array[i];
+      array[i] = array[array.length - 1 - i];
+      array[array.length - 1 - i] = old;
+    }
+    return array;
+  }
+
+  let array = [1, 2, 3, 4, 5];
+  reverseArrayInPlace(array);
+  console.log(array); // [5, 4, 3, 2, 1]
